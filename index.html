@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="icon.png" />
+    <title>Deteksi Warna</title>
+
+    <style>
+      /* Atur gaya untuk membuat halaman responsif */
+      body {
+        /* Atur latar belakang dengan gradient linear */
+        background: linear-gradient(
+          90deg,
+          rgb(0, 0, 7) 2%,
+          rgb(213, 70, 226) 39%,
+          rgb(121, 217, 236) 100%
+        );
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+      h1 {
+        text-align: center;
+        color: rgb(255, 255, 255);
+      }
+      canvas {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        padding: inline start 0;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <h1>Aplikasi Web Deteksi Warna</h1>
+    </center>
+    <canvas id="canvas" width="720" height="720"></canvas>
+    <video
+      id="video"
+      width="640"
+      height="480"
+      autoplay
+      style="display: none"
+    ></video>
+    <!-- Menggunakan CDN untuk OpenCV.js -->
+    <script async src="https://docs.opencv.org/4.x/opencv.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
